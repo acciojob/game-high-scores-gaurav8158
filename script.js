@@ -58,12 +58,12 @@ function saveScore() {
   const data1=document.createElement("td");
 data1.innerHTML=nameInput.value
 const data2=document.createElement("td")
-data2.innerHTML=scoreInput.value
+data2.innerHTML=scoreInput.value 
 const dataRow= document.createElement("tr");
 dataRow.appendChild(data1);
 dataRow.appendChild(data2);
 table.appendChild(dataRow)
-const prevdata = scores.innerHTML=JSON.parse(localStorage.getItem("scores")) || "0"
+const prevdata = JSON.parse(localStorage.getItem("scores")) || "0"
 if(prevdata<scoreInput.value){
   scores.innerHTML = scoreInput.value 
   localStorage.setItem("scores", JSON.stringify(scoreInput.value))
